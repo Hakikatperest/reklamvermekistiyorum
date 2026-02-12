@@ -1,61 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    Tamam 😎 şimdi işi bir üst lige taşıyoruz.
-
-Senin istediğin:
-
-1️⃣ Organization + Service Schema
-3️⃣ Headline’a 2026 Güncel ekleme
-
-İkisini de net ve düzgün şekilde veriyorum. Kopyala-yapıştır.
-
-✅ 1️⃣ Organization + Service Schema EKLE
-
-Mevcut FAQ schema’nın ALTINA şunu ekle.
-Aynı <head> içinde, FAQ scriptinden sonra koy.
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Google Reklam Vermek İstiyorum",
-  "url": "https://www.reklamvermekistiyorum.online/",
-  "logo": "https://www.reklamvermekistiyorum.online/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+90 530 315 87 52",
-    "contactType": "customer service",
-    "areaServed": "TR",
-    "availableLanguage": "Turkish"
-  },
-  "sameAs": [
-    "https://wa.me/905303158752"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Google Ads Reklam Yönetimi",
-  "provider": {
-    "@type": "Organization",
-    "name": "Google Reklam Vermek İstiyorum"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Turkey"
-  },
-  "description": "Profesyonel Google Ads reklam yönetimi, kampanya optimizasyonu ve dönüşüm artırma hizmeti.",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "TRY",
-    "price": "8000"
-  }
-}
-</script>
     <link rel="canonical" href="https://www.reklamvermekistiyorum.online/">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1216,38 +1161,8 @@ Aynı <head> içinde, FAQ scriptinden sonra koy.
             }
         }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Google reklam vermek istiyorum, nereden başlamalıyım?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Google reklam vermek için öncelikle bir Google Ads hesabı oluşturmanız, hedef kitlenizi belirlemeniz ve anahtar kelime araştırması yapmanız gerekir. Profesyonel Google reklam yönetimi ile kampanyalarınız daha hızlı ve verimli sonuç verir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Web sitesi olmadan Google reklam verilebilir mi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hayır, web sitesi olmadan Google reklam veremezsiniz. Google Ads reklamlarınızın bir hedef sayfası (landing page) olması gerekiyor. Kullanıcılar reklamınıza tıkladığında gidebilecekleri bir web sayfanız olmalı."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Google reklam fiyatları ne kadar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Google reklam fiyatları sektör, rekabet düzeyi ve anahtar kelime maliyetine göre değişir. Ortalama tıklama maliyetleri 3 TL ile 50 TL arasında değişebilir. Doğru optimizasyon ile maliyetler düşürülebilir."
-          }
-        }
-      ]
-    }
-        <script type="application/ld+json">
+        <!-- ORGANIZATION -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -1260,10 +1175,14 @@ Aynı <head> içinde, FAQ scriptinden sonra koy.
     "contactType": "customer service",
     "areaServed": "TR",
     "availableLanguage": "Turkish"
-  }
+  },
+  "sameAs": [
+    "https://wa.me/905303158752"
+  ]
 }
 </script>
 
+<!-- SERVICE -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1286,7 +1205,31 @@ Aynı <head> içinde, FAQ scriptinden sonra koy.
 }
 </script>
 
-    </script>
+<!-- FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Google reklam vermek istiyorum, nereden başlamalıyım?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google reklam vermek için öncelikle bir Google Ads hesabı oluşturmanız gerekir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Web sitesi olmadan Google reklam verilebilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır, Google reklamları için bir hedef sayfası gereklidir."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <!-- HEADER -->
@@ -1671,7 +1614,7 @@ Aynı <head> içinde, FAQ scriptinden sonra koy.
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Google Reklam Vermek İstiyorum | ADS Reklam Vermek</div>
+            <div class="footer-logo">Google Reklam Vermek İstiyorum | 2026 ADS Reklam Vermek</div>
             
             <div class="footer-contact">
                 <div class="contact-item">
