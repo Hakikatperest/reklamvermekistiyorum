@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Reklam Vermek İstiyorum | Ads Reklam Vermek</title>
+    <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="shortcut icon" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
     <meta name="description" content="Google reklam vermek istiyorum diyenler için profesyonel Google Ads hizmeti. Google ilan verme, Google reklam yönetimi, Google reklam kurulumu hizmetlerimizle ROI'nizi maksimize ediyoruz." />
     <meta name="keywords" content="google reklam vermek istiyorum, google reklam fiyatları, google reklam ücreti, google ilan ver, google da reklam vermek, google ads reklam vermek, google ilan vermek, google ilan verme, google ilan nasıl verilir, google reklam yönetimi, google reklam kurulumu, google reklam ajansı, google reklam uzmanı, google reklam danışmanı, ads reklam vermek, google ads yönetimi, google reklam nasıl verilir" />
     <meta name="robots" content="index, follow" />
@@ -250,90 +254,378 @@
             margin-right: auto;
         }
 
-        /* SEO ARTICLE */
-        .seo-article {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 50px 40px;
+        /* ========== YENİ SEO İÇERİK BÖLÜMÜ ========== */
+        .seo-article-new {
+            background: white;
+            border-radius: 32px;
+            padding: 60px 56px;
+            margin: 40px 0 60px;
             box-shadow: var(--shadow);
-            margin-bottom: 40px;
             border: 1px solid var(--gray-light);
         }
-
-        .article-title {
-            font-size: 2rem;
-            font-weight: 800;
+        .seo-article-new h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-top: 48px;
             margin-bottom: 20px;
-            color: var(--primary);
-            line-height: 1.3;
+            letter-spacing: -0.01em;
+            border-left: 6px solid var(--primary);
+            padding-left: 24px;
+        }
+        .seo-article-new h2:first-of-type {
+            margin-top: 0;
+        }
+        .seo-article-new p {
+            font-size: 1.05rem;
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .seo-article-new ul {
+            margin: 20px 0 30px 25px;
+        }
+        .seo-article-new li {
+            margin-bottom: 12px;
+            color: var(--gray-dark);
+            font-size: 1.02rem;
+        }
+        .highlight-contact {
+            background: linear-gradient(145deg, #EFF6FF, #FFFFFF);
+            border-radius: 24px;
+            padding: 32px 40px;
+            margin: 40px 0 20px;
+            border: 1px solid #D9E6FF;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contact-number-large {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+        }
+        .contact-number-large i {
+            color: #25D366;
+            margin-right: 12px;
+        }
+        .keyword-badge {
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 0.9rem;
         }
 
-        .article-subtitle {
-            font-size: 1.1rem;
-            color: var(--gray-dark);
-            margin-bottom: 30px;
+        /* ========== UZMAN PROFİLİ ========== */
+        .expert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0 60px;
+        }
+        .expert-card {
+            background: white;
+            border-radius: 28px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+        .expert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        .expert-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(145deg, #E8F0FE, #FFFFFF);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+        }
+        .expert-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .expert-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .expert-desc {
+            color: var(--gray);
+            margin-bottom: 28px;
+            font-size: 1.02rem;
             line-height: 1.6;
         }
+        .expert-contact-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 60px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .expert-contact-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
 
-        .article-content h2 {
+        /* ========== CASE STUDY SLIDER ========== */
+        .case-slider-container {
+            background: linear-gradient(145deg, #0B1A33, #152A4A);
+            border-radius: 32px;
+            padding: 48px 40px;
+            color: white;
+            margin: 60px 0;
+        }
+        .slider-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+        .slide-card {
+            flex: 0 0 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding-right: 20px;
+        }
+        .case-metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .metric-item {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
+            padding: 28px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #B0C8E6;
+            margin-bottom: 8px;
+        }
+        .metric-value {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+        .metric-desc {
+            font-size: 1rem;
+            color: #E0ECFF;
+        }
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .slider-dot.active {
+            width: 36px;
+            background: var(--accent);
+        }
+
+        /* ========== MÜŞTERİ REFERANSLARI ========== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0 60px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+        .stars {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+        .testimonial-text {
+            font-size: 1.02rem;
+            color: var(--gray-dark);
+            margin-bottom: 24px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .customer-name {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .customer-sector {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* ========== SERTİFİKA ALANI ========== */
+        .certificate-area {
+            background: white;
+            border-radius: 28px;
+            padding: 48px 40px;
+            margin: 60px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            border: 1px solid var(--gray-light);
+            box-shadow: var(--shadow);
+        }
+        .cert-badge {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .cert-icon {
+            width: 100px;
+            height: 100px;
+            background: #E8F0FE;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        .cert-text h4 {
             font-size: 1.6rem;
             font-weight: 700;
-            margin: 30px 0 15px;
-            color: var(--primary);
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--gray-light);
-        }
-
-        .article-content h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 25px 0 12px;
             color: var(--dark);
-        }
-
-        .article-content p {
-            margin-bottom: 16px;
-            color: var(--gray-dark);
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
-
-        .article-content ul, .article-content ol {
-            margin-bottom: 20px;
-            padding-left: 25px;
-        }
-
-        .article-content li {
             margin-bottom: 8px;
-            color: var(--gray-dark);
-            line-height: 1.6;
         }
-
-        .keyword-highlight {
-            background: linear-gradient(135deg, var(--accent), #F9AB00);
-            color: var(--dark);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            margin: 0 2px;
+        .trust-rozet {
+            display: flex;
+            gap: 24px;
         }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(51, 103, 214, 0.05));
-            border-left: 4px solid var(--primary);
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
+        .rozet-item {
+            text-align: center;
+            padding: 16px 20px;
+            background: #F6F9FF;
+            border-radius: 20px;
+            min-width: 130px;
         }
-
-        .highlight-box h4 {
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        .rozet-item i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+        .rozet-item div {
             font-weight: 700;
+            color: var(--dark);
         }
 
-        /* PACKAGES */
+        /* ========== İSTATİSTİK ALANI ========== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 60px 0 40px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        .stat-number {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .guarantee-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* GOOGLE ADS PACKAGES */
         .packages-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -715,7 +1007,6 @@
             .header {
                 padding: 15px 25px;
             }
-            
             .logo {
                 font-size: 1.4rem;
                 min-width: 280px;
@@ -728,12 +1019,10 @@
                 height: 75px;
                 min-height: 75px;
             }
-            
             .logo {
                 font-size: 1.3rem;
                 min-width: 250px;
             }
-            
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -748,29 +1037,36 @@
                 transition: right 0.3s ease;
                 gap: 20px;
             }
-            
             .nav-links.active {
                 right: 0;
             }
-            
             .mobile-menu-btn {
                 display: block;
             }
-            
             .hero {
                 padding: 140px 20px 60px;
                 margin-top: 75px;
             }
-            
             .hero h1 {
                 font-size: 2.1rem;
             }
-            
             .packages-container {
                 grid-template-columns: 1fr;
                 max-width: 600px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+            .expert-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .slide-card {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -778,42 +1074,50 @@
             .header {
                 padding: 12px 15px;
             }
-            
             .logo {
                 font-size: 1.2rem;
                 min-width: 220px;
             }
-            
             .hero h1 {
                 font-size: 2rem;
             }
-            
             .hero p {
                 font-size: 1.1rem;
             }
-            
             .btn {
                 min-width: 100%;
                 padding: 14px 20px;
                 font-size: 0.95rem;
             }
-            
             .hero-cta-buttons {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
-            
             .section-title {
                 font-size: 1.9rem;
             }
-            
-            .seo-article {
+            .seo-article-new {
                 padding: 35px 25px;
             }
-            
-            .article-title {
-                font-size: 1.7rem;
+            .seo-article-new h2 {
+                font-size: 1.6rem;
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .certificate-area {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cert-badge {
+                justify-content: center;
+            }
+            .trust-rozet {
+                justify-content: center;
             }
         }
 
@@ -822,93 +1126,73 @@
                 font-size: 1.1rem;
                 min-width: 200px;
             }
-            
             .hero h1 {
-    font-size: 2.3rem;
-}
-            
+                font-size: 1.8rem;
+            }
             .hero p {
                 font-size: 1rem;
             }
-            
             .content-section {
                 padding: 60px 15px;
             }
-            
             .section-title {
                 font-size: 1.7rem;
             }
-            
             .package-card {
                 padding: 30px 20px;
             }
-            
             .package-name {
                 font-size: 1.5rem;
             }
-            
             .package-price {
                 font-size: 2rem;
+            }
+            .seo-article-new {
+                padding: 30px 20px;
+            }
+            .highlight-contact {
+                padding: 24px 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .contact-number-large {
+                font-size: 1.4rem;
             }
         }
     </style>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
     {
-      "@type": "Question",
-      "name": "Google reklam vermek istiyorum, nereden başlamalıyım?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google reklam vermek için öncelikle bir Google Ads hesabı oluşturmanız, hedef kitlenizi belirlemeniz ve anahtar kelime araştırması yapmanız gerekir. Profesyonel Google reklam yönetimi ile kampanyalarınız daha hızlı ve verimli sonuç verir."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Web sitesi olmadan Google reklam verilebilir mi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google Ads reklamları için kullanıcıların yönlendirileceği bir hedef sayfası gereklidir. Web sitesi olmadan reklam performansı sağlıklı ölçülemez. Öncelikle dönüşüm odaklı bir web sitesi kurulmalıdır."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Google reklam fiyatları ne kadar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google reklam fiyatları sektör, rekabet düzeyi ve anahtar kelime maliyetine göre değişir. Ortalama tıklama maliyetleri 3 TL ile 50 TL arasında değişebilir. Doğru optimizasyon ile maliyetler düşürülebilir."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Google Ads reklamları ne kadar sürede sonuç verir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google reklamları genellikle 24-48 saat içinde yayına girer ve trafik almaya başlar. İlk 2 hafta test ve optimizasyon sürecidir. 3. haftadan itibaren daha stabil performans elde edilir."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Profesyonel Google reklam yönetimi neden önemlidir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Profesyonel Google reklam yönetimi sayesinde bütçe daha verimli kullanılır, sahte tıklamalar engellenir ve dönüşüm oranları artırılır. Uzman optimizasyonu ile maliyetler %40-60 oranında düşürülebilir."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Google reklam ajansı ile çalışmak avantaj sağlar mı?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Deneyimli bir Google reklam ajansı, stratejik kampanya kurulumu, sürekli optimizasyon ve detaylı raporlama sunar. Bu da yatırım getirisini artırır ve reklam bütçesinin boşa harcanmasını engeller."
-      }
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Google reklam vermek istiyorum, nereden başlamalıyım?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google reklam vermek için öncelikle bir Google Ads hesabı oluşturmanız, hedef kitlenizi belirlemeniz ve anahtar kelime araştırması yapmanız gerekir. Profesyonel Google reklam yönetimi ile kampanyalarınız daha hızlı ve verimli sonuç verir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Web sitesi olmadan Google reklam verilebilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır, web sitesi olmadan Google reklam veremezsiniz. Google Ads reklamlarınızın bir hedef sayfası (landing page) olması gerekiyor. Kullanıcılar reklamınıza tıkladığında gidebilecekleri bir web sayfanız olmalı."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Google reklam fiyatları ne kadar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google reklam fiyatları sektör, rekabet düzeyi ve anahtar kelime maliyetine göre değişir. Ortalama tıklama maliyetleri 3 TL ile 50 TL arasında değişebilir. Doğru optimizasyon ile maliyetler düşürülebilir."
+          }
+        }
+      ]
     }
-  ]
-}
-</script>
-
+    </script>
 </head>
 <body>
     <!-- HEADER -->
@@ -922,7 +1206,7 @@
         <nav class="nav-links" id="navLinks">
             <a href="#packages">Paketler</a>
             <a href="#websites">Web Sitesi</a>
-            <a href="#article">Makale</a>
+            <a href="#seo-article">Makale</a>
             <a href="#faq">SSS</a>
             <a href="https://wa.me/905303158752" class="btn-nav" target="_blank">
                 <i class="fab fa-whatsapp"></i> Ücretsiz Danışmanlık
@@ -974,30 +1258,6 @@
                 </div>
             </div>
 
-            <!-- PREMIUM PAKET -->
-            <div class="package-card popular">
-                <div class="popular-badge">POPÜLER</div>
-                <div class="package-name">Premium Google Reklam Yönetimi</div>
-                <div class="package-price">15.000 TL <span>/ ay</span></div>
-                <ul class="package-features">
-                    <li><i class="fas fa-check-circle"></i> Lokal ve çoklu reklam kampanyaları</li>
-                    <li><i class="fas fa-check-circle"></i> Aylık 200+ anahtar kelime optimizasyonu</li>
-                    <li><i class="fas fa-check-circle"></i> Günlük performans takibi ve raporlama</li>
-                    <li><i class="fas fa-check-circle"></i> Sahte tıklama engelleme stratejisi</li>
-                    <li><i class="fas fa-check-circle"></i> Aylık 5 reklam metni optimizasyonu</li>
-                    <li><i class="fas fa-check-circle"></i> Detaylı rakip analizi ve özel strateji</li>
-                    <li><i class="fas fa-check-circle"></i> 7/24 Whatsapp Danışmanlık</li>
-                </ul>
-                <div class="package-buttons">
-                    <a href="https://wa.me/905303158752?text=Merhaba,%20Premium%20Google%20Reklam%20Yönetimi%20paketini%20satın%20almak%20istiyorum." class="btn-package btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Hemen Satın Al
-                    </a>
-                    <a href="tel:05303158752" class="btn-package btn-call">
-                        <i class="fas fa-phone-alt"></i> Hemen Ara
-                    </a>
-                </div>
-            </div>
-
             <!-- WEBSITE PAKETİ -->
             <div class="package-card">
                 <div class="package-name">Kurumsal Web Sitesi</div>
@@ -1024,78 +1284,204 @@
         </div>
     </section>
 
-    <!-- SEO ARTICLE -->
-    <section class="content-section" id="article">
-        <div class="seo-article">
-            <h1 class="article-title">Google Reklam Vermek İstiyorum: Kapsamlı Rehber ve Uzman İpuçları</h1>
-            <p class="article-subtitle"><strong>"Google reklam vermek istiyorum"</strong> diyorsanız doğru yerdesiniz. 10 yıllık SEO ve Google Ads tecrübemizle hazırladığımız bu kapsamlı rehberde, <strong>Google ilan nasıl verilir?</strong>, <strong>Google reklam yönetimi</strong>, ve tüm sorularınızın cevaplarını bulacaksınız.</p>
-            
-            <div class="article-content">
-                <h2>Google İlan Vermek İstiyorum: Nereden Başlamalıyım?</h2>
-                <p>Eğer <span class="keyword-highlight">Google ilan vermek</span> istiyorsanız, öncelikle işletmenizin hedeflerini belirlemelisiniz. <strong>Google ilan verme</strong> sadece bir harcama değil, akıllı bir yatırımdır. Doğru strateji ile <strong>Google reklam ver</strong>erek işletmenizin online görünürlüğünü anında artırabilirsiniz.</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-lightbulb"></i> Uzman İpucu:</h4>
-                    <p>Bir <strong>Google reklam uzmanı</strong> veya <strong>Google reklam danışmanı</strong> ile çalışmak, <strong>Google reklam verme</strong> sürecinizi %40-60 daha verimli hale getirir. Uzman denetimi olmadan yapılan kampanyalar bütçe kaybına neden olabilir.</p>
+    <!-- YENİ SEO İÇERİK BÖLÜMÜ (ENTEGRE) -->
+    <section class="content-section" id="seo-article">
+        <div class="seo-article-new">
+            <h2>🔍 Google Ads Reklam Vermek İstiyorum, ne yapmalıyım?</h2>
+            <p><span class="keyword-badge">Google reklam vermek istiyorum</span> diyorsanız, ilk adım net hedefler belirlemek. Ürün mü satmak istiyorsunuz, yoksa marka bilinirliği mi artırmak? Ardından <strong>doğru anahtar kelime araştırması</strong> yapılmalı. Bizimle çalıştığınızda, 10+ yıllık Google Ads uzmanlarımız hesabınızı kurar, dönüşüm takibi ayarlar ve size özel bir teklif stratejisi oluşturur. Unutmayın, sadece reklam vermek yetmez; <strong>optimizasyon ve raporlama</strong> ile bütçenizden %40'a varan tasarruf sağlarsınız.</p>
+
+            <h2>⚠️ Google reklamlarım yayınlanmıyor, sebebi nedir?</h2>
+            <p>Reklamlarınız yayınlanmıyorsa bunun 5 ana sebebi var: 1) Ödeme yönteminizde sorun, 2) Anahtar kelimelerin düşük arama hacmi, 3) Reklam onay sürecinde reddedilme, 4) Bütçe yetersizliği, 5) Hedefleme hatası. En sık karşılaştığımız durum ise <strong>fatura doğrulama</strong> veya <strong>hesap doğrulama</strong> eksikliği. Müşterilerimizin %92'sinde bu sorunu 2 saat içinde çözüyoruz. Hemen 0530 315 87 52 numaralı uzman hattımızdan destek alabilirsiniz.</p>
+
+            <h2>💰 Google reklam fiyatları nedir? (2025 Güncel)</h2>
+            <p>Google reklam fiyatları sektör, rekabet ve tıklama başına maliyet (CPC) ile değişir. Ortalama CPC Türkiye'de <strong>8₺ - 45₺</strong> arasında değişiyor. Aylık minimum bütçe önerimiz 3.000₺ - 5.000₺'dir. Profesyonel <strong>Google reklam yönetimi</strong> paketlerimiz aylık 8.000₺'den başlar. Ancak bu bir maliyet değil, <strong>yatırımdır</strong>. Ortalama ROAS (reklam harcaması getirisi) müşterilerimizde 4,5 katıdır.</p>
+
+            <h2>🔐 Google hesap doğrulama yapamıyorum. Nasıl yapabilirim?</h2>
+            <p>Google Ads hesap doğrulama artık <strong>video doğrulama</strong> ve <strong>kimlik doğrulama</strong> gerektiriyor. Birçok kullanıcı "kamera açılmıyor", "belge okunmuyor" gibi sorunlar yaşıyor. Çözüm: Güncel bir Chrome tarayıcı kullanın, işıklandırmayı iyi ayarlayın, kimlik fotokopisinde yansıma olmasın. Hâlâ yapamıyorsanız, uzman ekibimiz sizin adınıza <strong>uzaktan bağlantı</strong> ile doğrulama işlemini tamamlar. Bu işlem ortalama 15 dakika sürer.</p>
+
+            <h2>📉 Google reklamlarım gözükmüyor. Çözümü nedir?</h2>
+            <p>Reklamlarınız gözüküyorken birden kayboldu mu? Bunun en sık sebebi <strong>düşük kalite puanı</strong> veya <strong>bütçe limiti</strong>. Ayrıca coğrafi hedefleme yaptıysanız o bölgede arama hacmi düşmüş olabilir. Derhal reklam uzmanımızla iletişime geçin; hesabınızı analiz edip 24 saat içinde reklamlarınızı tekrar aktif hale getirelim. Üstelik ilk analiz ücretsiz.</p>
+
+            <div class="highlight-contact">
+                <div>
+                    <span style="font-size: 1.2rem; color: var(--primary); font-weight: 600;">📞 Google reklam uzmanı iletişim numarası:</span>
+                    <div class="contact-number-large">
+                        <i class="fas fa-phone-alt"></i> 0530 315 87 52
+                    </div>
+                    <p style="margin-top: 12px; color: var(--gray-dark);">7/24 WhatsApp & Arama – Uzmanlarımız şu an aktif.</p>
                 </div>
-                
-                <h2>Google İlan Nasıl Verilir? Adım Adım Rehber</h2>
-                <p><strong>Google ilan nasıl verilir?</strong> sorusunun cevabını 5 temel adımda açıklıyoruz:</p>
-                
-                <ol>
-                    <li><strong>Google Ads hesabı oluşturma:</strong> <strong>Google reklam kurulumu</strong> için ilk adım</li>
-                    <li><strong>Hedef kitle belirleme:</strong> <strong>Google reklam yönetimi</strong>nin temel taşı</li>
-                    <li><strong>Anahtar kelime araştırması:</strong> <strong>Google ilan verme</strong> sürecinin en önemli adımı</li>
-                    <li><strong>Reklam metinleri oluşturma:</strong> Dönüşüm odaklı metinler yazın</li>
-                    <li><strong>Bütçe ve teklif belirleme:</strong> <strong>Google reklam ajansı</strong> desteğiyle bütçenizi optimize edin</li>
-                </ol>
-                
-                <h2>Google Reklam Yönetimi Neden Önemli?</h2>
-                <p><strong>Google reklam yönetimi</strong> profesyonel bir süreçtir. İşte neden bir <strong>Google reklam ajansı</strong> ile çalışmalısınız:</p>
-                
-                <ul>
-                    <li><strong>Google reklam uzmanı</strong> denetiminde kampanyalar daha verimli çalışır</li>
-                    <li><strong>Google reklam danışmanı</strong> sürekli optimizasyon yapar</li>
-                    <li>Rakip analiziyle stratejik avantaj elde edersiniz</li>
-                    <li>Sahte tıklamalar engellenir, bütçeniz korunur</li>
-                    <li>ROI (Yatırım Getirisi) maksimize edilir</li>
-                </ul>
-                
-                <h2>Google Reklam Kurulumu: Profesyonel Yaklaşım</h2>
-                <p><strong>Google reklam kurulumu</strong> sanıldığı kadar basit değildir. İşte profesyonel <strong>Google reklam ajansı</strong> yaklaşımı:</p>
-                
-                <div class="highlight-box">
-                    <h4><i class="fas fa-chart-line"></i> Önemli Bilgi:</h4>
-                    <p><strong>Google reklam yönetimi</strong> sadece reklamları açmak değil, sürekli optimizasyon, test ve analiz yapmaktır. Bir <strong>Google reklam uzmanı</strong> haftada ortalama 15-20 saat kampanya optimizasyonu yapar.</p>
+                <a href="tel:05303158752" class="btn btn-primary" style="background: var(--primary); min-width: auto;">Hemen Ara</a>
+            </div>
+
+            <p style="font-size: 1.1rem; border-top: 2px solid var(--gray-light); padding-top: 30px; margin-top: 20px;">
+                <strong style="background: var(--accent); padding: 6px 18px; border-radius: 50px; color: var(--dark);">#1 Anahtar Kelime:</strong> 
+                <span style="color: var(--primary); font-weight: 700; margin-left: 10px;">“Google reklam vermek istiyorum”</span> diyerek bize ulaşan 10 kişiden 8'i ilk ayda satışlarına başlıyor.
+            </p>
+        </div>
+    </section>
+
+    <!-- UZMAN PROFİLİ KARTLARI -->
+    <section class="content-section">
+        <h2 class="section-title">👤 Google Ads Uzman Ekibimiz</h2>
+        <p class="section-subtitle">10+ yıllık deneyim, Google sertifikalı uzmanlar ile kampanyalarınız profesyonelce yönetiliyor.</p>
+        
+        <div class="expert-grid">
+            <div class="expert-card">
+                <div class="expert-avatar">
+                    <i class="fas fa-user-tie"></i>
                 </div>
-                
-                <h3>Google Reklam Danışmanı Ne Yapar?</h3>
-                <p><strong>Google reklam danışmanı</strong> şu hizmetleri sağlar:</p>
-                
-                <ul>
-                    <li>Kampanya stratejisi ve planlaması</li>
-                    <li>Anahtar kelime araştırması ve optimizasyonu</li>
-                    <li>Reklam metni yazımı ve testi</li>
-                    <li>Bütçe optimizasyonu</li>
-                    <li>Performans analizi ve raporlama</li>
-                    <li>Rakip takibi ve analizi</li>
-                </ul>
-                
-                <h2>Google İlan Verme Süreci</h2>
-                <p><strong>Google ilan verme</strong> süreci şu adımlardan oluşur:</p>
-                
-                <ol>
-                    <li><strong>İlk konsültasyon:</strong> <strong>Google reklam danışmanı</strong> ile hedeflerinizi belirleyin</li>
-                    <li><strong>Kampanya kurulumu:</strong> <strong>Google reklam kurulumu</strong> profesyonelce yapılır</li>
-                    <li><strong>Test dönemi:</strong> İlk 2 hafta kampanyalar test edilir</li>
-                    <li><strong>Optimizasyon:</strong> <strong>Google reklam yönetimi</strong> ile sürekli iyileştirme</li>
-                    <li><strong>Raporlama:</strong> Düzenli performans raporları alırsınız</li>
-                </ol>
-                
-                <h2>Sonuç: Neden Profesyonel Google Reklam Yönetimi?</h2>
-                <p><strong>Google reklam vermek istiyorum</strong> diyen bir işletme sahibi olarak, en büyük hata reklamları kendi başınıza yönetmeye çalışmaktır. <strong>Google reklam yönetimi</strong> sürekli optimizasyon, analiz ve uzmanlık gerektirir.</p>
-                
-                <p><strong>Google ilan verme</strong> sürecini en iyi şekilde değerlendirmek, <strong>Google reklam kurulumu</strong>nu doğru yapmak ve maksimum ROI elde etmek için profesyonel bir <strong>Google reklam ajansı</strong> ile çalışın. Unutmayın: <strong>Google reklam uzmanı</strong> veya <strong>Google reklam danışmanı</strong> desteği, başarılı kampanyaların anahtarıdır.</p>
+                <div class="expert-name">Umut Yanardağ</div>
+                <span class="expert-badge"><i class="fas fa-medal"></i> 10+ Yıl Deneyim</span>
+                <p class="expert-desc">Google Partner düzeyinde sertifikalı Ads uzmanı. 500+ kampanya yönetti, toplam 20M reklam bütçesi optimize etti. E-ticaret, hizmet ve perakende sektörlerinde uzman.</p>
+                <a href="tel:05303158752" class="expert-contact-btn"><i class="fas fa-phone-alt"></i> Hemen Ulaş</a>
+            </div>
+            <div class="expert-card">
+                <div class="expert-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="expert-name">Ümit Yanardağ</div>
+                <span class="expert-badge"><i class="fas fa-certificate"></i> Google Ads Specialist</span>
+                <p class="expert-desc">SEO ve Google Ads entegrasyonu konusunda uzman. Yerel işletmeler için maliyetleri %55 düşüren stratejiler geliştirdi. Yılda 200+ saat Google eğitimi veriyor.</p>
+                <a href="https://wa.me/905303158752" class="expert-contact-btn" style="background: #25D366;"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY SLIDER -->
+    <section class="content-section">
+        <div class="case-slider-container">
+            <h3 class="slider-title">📊 Gerçek Vaka: Öncesi & Sonrası</h3>
+            <div class="slider-wrapper">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- SLIDE 1 -->
+                    <div class="slide-card">
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">Tıklama Başı Maliyet (CPC)</div>
+                                <div class="metric-value">18₺ → 9,5₺</div>
+                                <div class="metric-desc">%47 daha düşük CPC</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Dönüşüm Oranı (CR)</div>
+                                <div class="metric-value">%2,1 → %4,8</div>
+                                <div class="metric-desc">%128 artış</div>
+                            </div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); border-radius: 24px; padding: 28px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">🚀 Mobilya Sektörü</div>
+                            <p style="color: #C0D4F0;">6 aylık yönetim sonucu ROAS 3,2'den 7,1'e yükseldi. Aylık reklam bütçesi 25.000₺ iken 42.000₺ ciro elde edildi.</p>
+                        </div>
+                    </div>
+                    <!-- SLIDE 2 -->
+                    <div class="slide-card">
+                        <div class="case-metrics">
+                            <div class="metric-item">
+                                <div class="metric-label">ROAS (Yatırım Getirisi)</div>
+                                <div class="metric-value">2,1x → 6,8x</div>
+                                <div class="metric-desc">%223 getiri artışı</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">Lead Maliyeti</div>
+                                <div class="metric-value">120₺ → 45₺</div>
+                                <div class="metric-desc">%62 daha verimli</div>
+                            </div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); border-radius: 24px; padding: 28px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">🏆 Sağlık Turizmi</div>
+                            <p style="color: #C0D4F0;">7 ayda 340+ kaliteli hasta yönlendirmesi. Reklam bütçesi %30 artmasına rağmen maliyet düştü.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-dot active" onclick="currentSlide(0)"></button>
+                <button class="slider-dot" onclick="currentSlide(1)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÜŞTERİ REFERANSLARI -->
+    <section class="content-section">
+        <h2 class="section-title">⭐ Gerçek Müşteri Yorumları</h2>
+        <p class="section-subtitle">Google reklam yönetimimizle işini büyüten mutlu müşterilerimiz</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Google reklam vermek istiyorum diye araştırırken buldum. 3 yıldır çalışıyoruz, reklam maliyetlerimiz düştü, satışlarımız katlandı."</p>
+                <div class="customer-name">Murat Kaya</div>
+                <div class="customer-sector">Tekstitop.com.tr / E-ticaret</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Hesap doğrulama sorunumu 10 dakikada çözdüler. Şimdi aylık 40.000₺ bütçeyle reklam veriyoruz ve çok memnunuz."</p>
+                <div class="customer-name">Ayşe Yalçın</div>
+                <div class="customer-sector">Yalçın Avukatlık</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Reklamlarım yayınlanmıyordu, iki saat içinde müdahale ettiler. Kesinlikle profesyonel ve güvenilir ekip."</p>
+                <div class="customer-name">Hakan Öztürk</div>
+                <div class="customer-sector">Öztürk Oto</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERTİFİKA ALANI + GÜVEN ROZETİ -->
+    <section class="content-section">
+        <div class="certificate-area">
+            <div class="cert-badge">
+                <div class="cert-icon">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="cert-text">
+                    <h4>🏆 Google Ads Sertifikalı</h4>
+                    <p style="color: var(--gray); max-width: 350px;">Arama, Görüntülü, Video ve Alışveriş reklamları için tam yetkili uzman ekibi.</p>
+                </div>
+            </div>
+            <div class="trust-rozet">
+                <div class="rozet-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>%100 Güvenli</div>
+                    <span style="font-size: 0.8rem; color: var(--gray);">SSL & KVKK</span>
+                </div>
+                <div class="rozet-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>Resmi Partner</div>
+                    <span style="font-size: 0.8rem; color: var(--gray);">Google Premier</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İSTATİSTİK ALANI -->
+    <section class="content-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">120+</div>
+                <div class="stat-label">Aktif Müşteri</div>
+                <span class="guarantee-badge">Her ay büyüyen portföy</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">%48</div>
+                <div class="stat-label">Daha Düşük CPC</div>
+                <span class="guarantee-badge">Ortalama tasarruf</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1.200+</div>
+                <div class="stat-label">Kampanya Yönetildi</div>
+                <span class="guarantee-badge">Tüm sektörler</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7 Gün</div>
+                <div class="stat-label">İlk Lead Garantisi</div>
+                <span class="guarantee-badge">Yoksa ücret iade*</span>
             </div>
         </div>
     </section>
@@ -1159,16 +1545,6 @@
                 </div>
                 <div class="faq-answer">
                     Google Ads platformu sürekli güncellenen kompleks bir sistemdir. Profesyonel yönetim ile: %40-60 daha düşük maliyetle daha fazla dönüşüm, rakip analiziyle stratejik avantaj, sürekli optimizasyon ve maksimum ROI elde edersiniz.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Google ücretli sponsorlu reklam ile organik SEO arasındaki fark nedir?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    Google reklam (sponsorlu) anında sonuç verir ve bütçeniz kadar görünürlük sağlar. Organik SEO ise uzun vadeli bir yatırımdır, zaman alır ancak kalıcı sonuçlar getirir. En iyi strateji ikisini birlikte kullanmaktır.
                 </div>
             </div>
         </div>
@@ -1293,42 +1669,28 @@
             });
         });
 
-        // Package hover effects
-        document.querySelectorAll('.package-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
+        // Slider functionality
+        let slideIndex = 0;
+        const track = document.getElementById('sliderTrack');
+        const dots = document.querySelectorAll('.slider-dot');
 
-        // Close chat bubble when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!googleChatBubble.contains(e.target) && 
-                googleChatBubble.classList.contains('active')) {
-                // Only close if not clicking on floating buttons
-                const floatingBtns = document.querySelector('.floating-buttons');
-                if (!floatingBtns.contains(e.target)) {
-                    googleChatBubble.classList.remove('active');
-                }
-            }
-        });
-
-        // Add WhatsApp tracking
-        document.querySelectorAll('.btn-whatsapp, .floating-whatsapp').forEach(btn => {
-            btn.addEventListener('click', function() {
-                console.log('WhatsApp button clicked: ' + this.href);
+        window.currentSlide = function(index) {
+            if (!track) return;
+            const slideWidth = track.children[0]?.offsetWidth || 0;
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
             });
-        });
+            slideIndex = index;
+        };
 
-        // Add phone tracking
-        document.querySelectorAll('[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Phone link clicked: ' + this.href);
+        // Initialize slider
+        if (dots.length > 0) {
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => currentSlide(idx));
             });
-        });
+            currentSlide(0);
+        }
 
         // Fix for mobile viewport height
         function setVH() {
@@ -1354,7 +1716,7 @@
         }, observerOptions);
 
         // Observe all content sections
-        document.querySelectorAll('.content-section, .seo-article').forEach(section => {
+        document.querySelectorAll('.content-section, .seo-article-new').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
             section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
