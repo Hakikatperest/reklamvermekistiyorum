@@ -3,7 +3,7 @@
 <head>
     <link rel="canonical" href="https://www.reklamvermekistiyorum.online/">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>Google Reklam Vermek İstiyorum | Ads Reklam Vermek</title>
     <!-- FAVICON -->
 <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
@@ -49,6 +49,8 @@
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
 
         /* HEADER - FIXED */
@@ -66,6 +68,7 @@
             box-shadow: var(--shadow);
             height: 80px;
             min-height: 80px;
+            width: 100%;
         }
 
         .logo {
@@ -127,10 +130,20 @@
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--dark);
             cursor: pointer;
             z-index: 1001;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--light);
         }
 
         /* HERO SECTION */
@@ -254,7 +267,7 @@
             margin-right: auto;
         }
 
-        /* ========== YENİ SEO İÇERİK BÖLÜMÜ ========== */
+        /* SEO İÇERİK BÖLÜMÜ */
         .seo-article-new {
             background: white;
             border-radius: 32px;
@@ -321,7 +334,7 @@
             font-size: 0.9rem;
         }
 
-        /* ========== UZMAN PROFİLİ ========== */
+        /* UZMAN PROFİLİ */
         .expert-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -401,7 +414,7 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* ========== CASE STUDY SLIDER ========== */
+        /* CASE STUDY SLIDER */
         .case-slider-container {
             background: linear-gradient(145deg, #0B1A33, #152A4A);
             border-radius: 32px;
@@ -480,7 +493,7 @@
             background: var(--accent);
         }
 
-        /* ========== MÜŞTERİ REFERANSLARI ========== */
+        /* MÜŞTERİ REFERANSLARI */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -523,7 +536,7 @@
             color: var(--gray);
         }
 
-        /* ========== SERTİFİKA ALANI ========== */
+        /* SERTİFİKA ALANI */
         .certificate-area {
             background: white;
             border-radius: 28px;
@@ -581,7 +594,7 @@
             color: var(--dark);
         }
 
-        /* ========== İSTATİSTİK ALANI ========== */
+        /* İSTATİSTİK ALANI */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -625,10 +638,11 @@
             display: inline-block;
         }
 
-        /* GOOGLE ADS PACKAGES */
+        /* GOOGLE ADS PACKAGES - SADECE REKLAM PAKETİ KALDI */
         .packages-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: minmax(350px, 600px);
+            justify-content: center;
             gap: 30px;
             margin-top: 40px;
         }
@@ -651,22 +665,6 @@
             transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
             border-color: var(--primary);
-        }
-
-        .package-card.popular {
-            border-color: var(--accent);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: linear-gradient(135deg, var(--accent), #F9AB00);
-            color: var(--dark);
-            padding: 8px 40px;
-            font-weight: 700;
-            transform: rotate(45deg);
-            font-size: 0.9rem;
         }
 
         .package-name {
@@ -1002,7 +1000,7 @@
             line-height: 1.5;
         }
 
-        /* RESPONSIVE */
+        /* RESPONSIVE - DÜZELTİLMİŞ HAMBURGER MENÜ */
         @media (max-width: 1200px) {
             .header {
                 padding: 15px 25px;
@@ -1014,57 +1012,89 @@
         }
 
         @media (max-width: 992px) {
-            .header {
-                padding: 15px 20px;
-                height: 75px;
-                min-height: 75px;
+            .mobile-menu-btn {
+                display: flex !important;
             }
-            .logo {
-                font-size: 1.3rem;
-                min-width: 250px;
-            }
+            
             .nav-links {
                 position: fixed;
-                top: 0;
+                top: 80px;
                 right: -100%;
-                width: 300px;
-                height: 100vh;
+                width: 280px;
+                height: calc(100vh - 80px);
                 background: white;
                 flex-direction: column;
                 justify-content: flex-start;
-                padding: 80px 30px 30px;
-                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-                transition: right 0.3s ease;
+                padding: 40px 25px;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right 0.4s ease-in-out;
                 gap: 20px;
+                align-items: stretch;
+                display: flex;
+                z-index: 999;
+                overflow-y: auto;
             }
+            
             .nav-links.active {
                 right: 0;
             }
-            .mobile-menu-btn {
+            
+            .nav-links a {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+                border-radius: var(--radius-sm);
+                text-align: center;
+                white-space: normal;
                 display: block;
             }
+            
+            .nav-links a:not(.btn-nav) {
+                background: var(--light);
+            }
+            
+            .nav-links .btn-nav {
+                margin-top: 10px;
+                padding: 15px 20px;
+                text-align: center;
+            }
+            
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+                min-width: 200px;
+            }
+            
             .hero {
                 padding: 140px 20px 60px;
-                margin-top: 75px;
+                margin-top: 80px;
             }
+            
             .hero h1 {
-                font-size: 2.1rem;
+                font-size: 2.2rem;
             }
+            
             .packages-container {
                 grid-template-columns: 1fr;
-                max-width: 600px;
+                max-width: 500px;
                 margin-left: auto;
                 margin-right: auto;
             }
+            
             .expert-grid {
                 grid-template-columns: 1fr;
             }
+            
             .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
             .slide-card {
                 grid-template-columns: 1fr;
             }
@@ -1074,90 +1104,172 @@
             .header {
                 padding: 12px 15px;
             }
+            
             .logo {
-                font-size: 1.2rem;
-                min-width: 220px;
+                font-size: 1.1rem;
+                min-width: 180px;
+                white-space: normal;
+                line-height: 1.3;
             }
+            
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.9rem;
             }
+            
             .hero p {
                 font-size: 1.1rem;
             }
+            
             .btn {
                 min-width: 100%;
                 padding: 14px 20px;
                 font-size: 0.95rem;
             }
+            
             .hero-cta-buttons {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
+            
             .section-title {
-                font-size: 1.9rem;
+                font-size: 1.8rem;
             }
+            
             .seo-article-new {
                 padding: 35px 25px;
             }
+            
             .seo-article-new h2 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
+            
             .testimonial-grid {
                 grid-template-columns: 1fr;
             }
+            
             .stats-grid {
                 grid-template-columns: 1fr;
             }
+            
             .certificate-area {
                 flex-direction: column;
                 text-align: center;
             }
+            
             .cert-badge {
                 justify-content: center;
             }
+            
             .trust-rozet {
                 justify-content: center;
+            }
+            
+            .packages-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-slider-container {
+                padding: 35px 25px;
+            }
+            
+            .slider-title {
+                font-size: 1.6rem;
+            }
+            
+            .metric-value {
+                font-size: 2rem;
             }
         }
 
         @media (max-width: 576px) {
             .logo {
-                font-size: 1.1rem;
-                min-width: 200px;
+                font-size: 1rem;
+                min-width: 160px;
             }
+            
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
+            
             .hero p {
                 font-size: 1rem;
             }
+            
             .content-section {
-                padding: 60px 15px;
+                padding: 50px 15px;
             }
+            
             .section-title {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
+            
             .package-card {
                 padding: 30px 20px;
             }
+            
             .package-name {
                 font-size: 1.5rem;
             }
+            
             .package-price {
                 font-size: 2rem;
             }
+            
             .seo-article-new {
-                padding: 30px 20px;
+                padding: 25px 18px;
             }
+            
+            .seo-article-new h2 {
+                font-size: 1.3rem;
+                padding-left: 15px;
+            }
+            
             .highlight-contact {
-                padding: 24px 20px;
+                padding: 24px 18px;
                 flex-direction: column;
                 text-align: center;
                 gap: 20px;
             }
+            
             .contact-number-large {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+            
+            .expert-card {
+                padding: 30px 20px;
+            }
+            
+            .expert-name {
+                font-size: 1.5rem;
+            }
+            
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+            
+            .google-chat-bubble {
+                max-width: 260px;
+                right: 15px;
+                bottom: 130px;
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .logo {
+                font-size: 0.9rem;
+                min-width: 140px;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1242,7 +1354,6 @@
         </button>
         <nav class="nav-links" id="navLinks">
             <a href="#packages">Paketler</a>
-            <a href="#websites">Web Sitesi</a>
             <a href="#seo-article">Makale</a>
             <a href="#faq">SSS</a>
             <a href="https://wa.me/905303158752" class="btn-nav" target="_blank">
@@ -1254,10 +1365,11 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-<h1>
-  <span class="white-text">Google Reklam Vermek İstiyorum</span> 
-  <span class="accent-text">| 2026 Güncel Google Ads Reklam Vermek</span>
-</h1>            <p><strong>Google Ads reklam vermek mi istiyorsunuz?</strong> 10 yıllık SEO ve Google Ads uzmanı ekibimizle profesyonel reklam yönetimi sağlıyor, işletmenizin dijital görünürlüğünü maksimize ediyoruz.</p>
+            <h1>
+                <span class="white-text">Google Reklam Vermek İstiyorum</span> 
+                <span class="accent-text">| 2026 Güncel Google Ads Reklam Vermek</span>
+            </h1>
+            <p><strong>Google Ads reklam vermek mi istiyorsunuz?</strong> 10 yıllık SEO ve Google Ads uzmanı ekibimizle profesyonel reklam yönetimi sağlıyor, işletmenizin dijital görünürlüğünü maksimize ediyoruz.</p>
             <div class="hero-cta-buttons">
                 <a href="https://wa.me/905303158752?text=Merhaba,%20Google%20reklam%20vermek%20istiyorum.%20Ücretsiz%20danışmanlık%20almak%20istiyorum." class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> Ücretsiz Danışmanlık Al
@@ -1269,13 +1381,13 @@
         </div>
     </section>
 
-    <!-- GOOGLE ADS PACKAGES -->
+    <!-- GOOGLE ADS PACKAGES - SADECE REKLAM YÖNETİMİ PAKETİ -->
     <section class="content-section" id="packages">
-        <h2 class="section-title">Google Reklam Yönetimi Paketleri</h2>
-        <p class="section-subtitle">Google reklam vermek istiyorum diyen işletmeler için özel tasarlanmış profesyonel paketlerimizle tanışın.</p>
+        <h2 class="section-title">Google Reklam Yönetimi Paketi</h2>
+        <p class="section-subtitle">Google reklam vermek istiyorum diyen işletmeler için özel tasarlanmış profesyonel yönetim paketimizle tanışın.</p>
         
         <div class="packages-container">
-            <!-- STANDART PAKET -->
+            <!-- STANDART PAKET - TEK PAKET -->
             <div class="package-card">
                 <div class="package-name">Aylık Google Reklam Yönetimi</div>
                 <div class="package-price">5.000 TL <span>/ ay</span></div>
@@ -1284,7 +1396,9 @@
                     <li><i class="fas fa-check-circle"></i> Haftalık performans raporlaması</li>
                     <li><i class="fas fa-check-circle"></i> Sahte tıklama engelleme stratejisi</li>
                     <li><i class="fas fa-check-circle"></i> Rakip analizi ve strateji geliştirme</li>
-                    <li><i class="fas fa-check-circle"></i> 7/12 Whatsapp Danışmanlık</li>
+                    <li><i class="fas fa-check-circle"></i> 7/24 Whatsapp Danışmanlık</li>
+                    <li><i class="fas fa-check-circle"></i> Dönüşüm takibi kurulumu</li>
+                    <li><i class="fas fa-check-circle"></i> A/B testleri ile reklam optimizasyonu</li>
                 </ul>
                 <div class="package-buttons">
                     <a href="https://wa.me/905303158752?text=Merhaba,%20Standart%20Google%20Reklam%20Yönetimi%20paketini%20satın%20almak%20istiyorum." class="btn-package btn-whatsapp">
@@ -1292,29 +1406,6 @@
                     </a>
                     <a href="tel:05303158752" class="btn-package btn-call">
                         <i class="fas fa-phone-alt"></i> Hemen Ara
-                    </a>
-                </div>
-            </div>
-
-            <!-- WEBSITE PAKETİ -->
-            <div class="package-card">
-                <div class="package-name">Kurumsal Web Sitesi</div>
-                <div class="package-price">5.000 TL <span>/ yıllık</span></div>
-                <ul class="package-features">
-                    <li><i class="fas fa-check-circle"></i> Maksimum 5 İç Sayfa</li>
-                    <li><i class="fas fa-check-circle"></i> Tamamen Google Uyumlu</li>
-                    <li><i class="fas fa-check-circle"></i> SEO Uyumlu Tasarım</li>
-                    <li><i class="fas fa-check-circle"></i> Hızlı ve Modern Tasarım</li>
-                    <li><i class="fas fa-check-circle"></i> Mobil Uyumlu (Responsive)</li>
-                    <li><i class="fas fa-check-circle"></i> Temel SEO Ayarları</li>
-                    <li><i class="fas fa-check-circle"></i> 6 Ay Ücretsiz Teknik Destek</li>
-                </ul>
-                <div class="package-buttons">
-                    <a href="https://wa.me/905303158752?text=Merhaba,%20Kurumsal%20Web%20Sitesi%20paketini%20satın%20almak%20istiyorum." class="btn-package btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Web Sitesi İstiyorum
-                    </a>
-                    <a href="tel:05303158752" class="btn-package btn-call">
-                        <i class="fas fa-phone-alt"></i> Detaylı Bilgi Al
                     </a>
                 </div>
             </div>
@@ -1331,7 +1422,7 @@
             <p>Reklamlarınız yayınlanmıyorsa bunun 5 ana sebebi var: 1) Ödeme yönteminizde sorun, 2) Anahtar kelimelerin düşük arama hacmi, 3) Reklam onay sürecinde reddedilme, 4) Bütçe yetersizliği, 5) Hedefleme hatası. En sık karşılaştığımız durum ise <strong>fatura doğrulama</strong> veya <strong>hesap doğrulama</strong> eksikliği. Müşterilerimizin %92'sinde bu sorunu 2 saat içinde çözüyoruz. Hemen 0530 315 87 52 numaralı uzman hattımızdan destek alabilirsiniz.</p>
 
             <h2>💰 Google reklam fiyatları nedir? (2026 Güncel)</h2>
-            <p>Google reklam fiyatları sektör, rekabet ve tıklama başına maliyet (CPC) ile değişir. Ortalama CPC Türkiye'de <strong>8₺ - 45₺</strong> arasında değişiyor. Aylık minimum bütçe önerimiz 3.000₺ - 5.000₺'dir. Profesyonel <strong>Google reklam yönetimi</strong> paketlerimiz aylık 8.000₺'den başlar. Ancak bu bir maliyet değil, <strong>yatırımdır</strong>. Ortalama ROAS (reklam harcaması getirisi) müşterilerimizde 4,5 katıdır.</p>
+            <p>Google reklam fiyatları sektör, rekabet ve tıklama başına maliyet (CPC) ile değişir. Ortalama CPC Türkiye'de <strong>8₺ - 45₺</strong> arasında değişiyor. Aylık minimum bütçe önerimiz 3.000₺ - 5.000₺'dir. Profesyonel <strong>Google reklam yönetimi</strong> paketlerimiz aylık 5.000₺'den başlar. Ancak bu bir maliyet değil, <strong>yatırımdır</strong>. Ortalama ROAS (reklam harcaması getirisi) müşterilerimizde 4,5 katıdır.</p>
 
             <h2>🔐 Google hesap doğrulama yapamıyorum. Nasıl yapabilirim?</h2>
             <p>Google Ads hesap doğrulama artık <strong>video doğrulama</strong> ve <strong>kimlik doğrulama</strong> gerektiriyor. Birçok kullanıcı "kamera açılmıyor", "belge okunmuyor" gibi sorunlar yaşıyor. Çözüm: Güncel bir Chrome tarayıcı kullanın, ışıklandırmayı iyi ayarlayın, kimlik fotokopisinde yansıma olmasın. Hâlâ yapamıyorsanız, uzman ekibimiz sizin adınıza <strong>uzaktan bağlantı</strong> ile doğrulama işlemini tamamlar. Bu işlem ortalama 15 dakika sürer.</p>
@@ -1530,7 +1621,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Hayır, web sitesi olmadan Google reklam veremezsiniz. Google Ads reklamlarınızın bir hedef sayfası (landing page) olması gerekiyor. Kullanıcılar reklamınıza tıkladığında gidebilecekleri bir web sayfanız olmalı. Ancak web siteniz yoksa önce <strong>Kurumsal Web Sitesi</strong> paketimizle profesyonel bir web sitesi yaptırabilir, ardından Google reklam kampanyalarınızı başlatabilirsiniz.
+                    Hayır, web sitesi olmadan Google reklam veremezsiniz. Google Ads reklamlarınızın bir hedef sayfası (landing page) olması gerekiyor. Kullanıcılar reklamınıza tıkladığında gidebilecekleri bir web sayfanız olmalı. Profesyonel Google reklam yönetimi paketimizle birlikte ihtiyacınıza uygun açılış sayfası önerileri de sunuyoruz.
                 </div>
             </div>
 
@@ -1637,30 +1728,70 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle - FIXED
+        // DOM elementleri
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
+        const body = document.body;
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
+        // Hamburger menü toggle - DÜZELTİLDİ
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                
+                // Menü aktiflik durumunu toggle et
+                navLinks.classList.toggle('active');
+                
+                // İkon değiştir (hamburger / çarpı)
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            });
+        }
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && 
-                !mobileMenuBtn.contains(e.target) && 
-                navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        // Menü dışına tıklandığında menüyü kapat - DÜZELTİLDİ
+        document.addEventListener('click', function(e) {
+            if (navLinks && mobileMenuBtn) {
+                const isClickInsideNav = navLinks.contains(e.target);
+                const isClickOnMenuBtn = mobileMenuBtn.contains(e.target);
+                
+                if (!isClickInsideNav && !isClickOnMenuBtn && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = 'fas fa-bars';
+                    }
+                }
             }
         });
 
-        // FAQ Accordion
+        // Sayfa yüklendiğinde menü kapalı olsun
+        window.addEventListener('load', function() {
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars';
+                }
+            }
+        });
+
+        // FAQ Accordion - DÜZELTİLDİ
         document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
+            question.addEventListener('click', function(e) {
+                e.preventDefault();
+                const item = this.parentElement;
+                
+                // Diğer FAQ item'larını kapat (opsiyonel)
+                // document.querySelectorAll('.faq-item').forEach(faq => {
+                //     if (faq !== item) {
+                //         faq.classList.remove('active');
+                //     }
+                // });
+                
                 item.classList.toggle('active');
             });
         });
@@ -1669,62 +1800,87 @@
         const googleChatBubble = document.getElementById('googleChatBubble');
         const chatClose = document.getElementById('chatClose');
         
-        setTimeout(() => {
-            googleChatBubble.classList.add('active');
-        }, 5000);
+        if (googleChatBubble) {
+            setTimeout(() => {
+                googleChatBubble.classList.add('active');
+            }, 5000);
+        }
 
-        chatClose.addEventListener('click', () => {
-            googleChatBubble.classList.remove('active');
-        });
+        if (chatClose) {
+            chatClose.addEventListener('click', function() {
+                googleChatBubble.classList.remove('active');
+            });
+        }
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for anchor links - DÜZELTİLDİ
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+                const href = this.getAttribute('href');
                 
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                if (href === '#') return;
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                const targetElement = document.querySelector(href);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
-                    if (navLinks.classList.contains('active')) {
+                    // Menü açıksa kapat
+                    if (navLinks && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.className = 'fas fa-bars';
+                        }
                     }
                 }
             });
         });
 
-        // Slider functionality
+        // Slider functionality - DÜZELTİLDİ
         let slideIndex = 0;
         const track = document.getElementById('sliderTrack');
         const dots = document.querySelectorAll('.slider-dot');
 
         window.currentSlide = function(index) {
             if (!track) return;
-            const slideWidth = track.children[0]?.offsetWidth || 0;
+            
+            // Her slide'ın genişliğini al
+            const slides = track.children;
+            if (slides.length === 0) return;
+            
+            const slideWidth = slides[0]?.offsetWidth || 0;
             track.style.transform = `translateX(-${index * slideWidth}px)`;
+            
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
+            
             slideIndex = index;
         };
 
-        // Initialize slider
-        if (dots.length > 0) {
+        // Slider initialize
+        if (dots.length > 0 && track) {
             dots.forEach((dot, idx) => {
                 dot.addEventListener('click', () => currentSlide(idx));
             });
-            currentSlide(0);
+            
+            // Sayfa yüklendiğinde slider'ı başlat
+            window.addEventListener('load', function() {
+                currentSlide(0);
+            });
+            
+            // Pencere boyutu değiştiğinde slider'ı güncelle
+            window.addEventListener('resize', function() {
+                currentSlide(slideIndex);
+            });
         }
 
-        // Fix for mobile viewport height
+        // Mobil viewport height fix
         function setVH() {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -1732,7 +1888,7 @@
         setVH();
         window.addEventListener('resize', setVH);
 
-        // Load animation for sections
+        // Scroll animasyonu - DÜZELTİLDİ
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1749,10 +1905,12 @@
 
         // Observe all content sections
         document.querySelectorAll('.content-section, .seo-article-new').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(section);
+            if (section) {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            }
         });
     </script>
 </body>
